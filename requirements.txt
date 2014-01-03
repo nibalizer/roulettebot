@@ -1,0 +1,11 @@
+BeautifulSoup==3.2.1
+RikerIpsum==1.1
+Twisted==13.1.0
+argparse==1.2.1
+iso8601==0.1.4
+prettytable==0.7.2
+pyOpenSSL==0.13
+python-novaclient==2.13.0
+requests==1.2.3
+simplejson==3.3.0
+zope.interface==4.0.5
