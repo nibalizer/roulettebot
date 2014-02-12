@@ -101,10 +101,14 @@ class LogBot(irc.IRCClient):
         elif msg.startswith("+roulette"):
             roulette = random.choice(range(6))
             if roulette == 0:
+                self.logger.log("kicking {0}".format(user))
                 self.msg(channel, "Bad luck")
                 #self.msg(channel, "Would have kicked {0}".format(user))
                 self.kick(channel, user, "Better luck next time")
                 self.logger.log("kicked {0}".format(user))
+                self.mode(channel, True, "b *!*{0}".format(user))
+                #time.sleep(30)
+                #self.mode(channel, False, "b *!*{0}".format(user))
             else:
                 self.msg(channel, "*Click*".format(user))
  
